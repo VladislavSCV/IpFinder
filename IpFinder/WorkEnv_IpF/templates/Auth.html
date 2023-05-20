@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verification</title>
+    <style>
+    html{
+    font-family: Arial, sans-serif;
+    style="
+    height: 700px;
+    width: 1500px;
+    background-color: teal;
+"
+    }
+    .steam-box {
+
+            position: relative;
+            margin-top: 25%;
+            left: 40%;
+            width: 400px;
+            transform: translate(-50%, -50%);
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.8);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+            border-radius: 10px;
+        }
+        .steam-box h2 {
+            margin: 0 0 30px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .steam-box .input-box {
+            position: relative;
+        }
+
+
+        .steam-box .input-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+        .steam-box .input-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .steam-box .input-box input:focus~label,
+        .steam-box .input-box input:valid~label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+        .steam-box input[type="submit"] {
+            background: transparent;
+            border: none;
+            color: #fff;
+            background: #03a9f4;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button{
+        background: transparent;
+            border: none;
+            color: #fff;
+            background: #03a9f4;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+  .steam-box input[type="reset"] {
+            background: transparent;
+            border: none;
+            color: #fff;
+            background: #03a9f4;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #toggle {
+            position: absolute;
+            top: 35%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: url(photos/show.png);
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        #toggle.hide {
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+<!--НАСТРОЙ МАРШРУТИЗАЦИЮ К ДОМАШНЕЙ СТРАНИЦЕ-->
+<a href="/IpFinder"> <img src="https://im.wampi.ru/2023/05/16/arrow.png" style="
+    position: relative;
+    left: 10px;
+    top: 10px;
+    height: 40px;
+"></a>
+
+<div class="steam-box" style="
+    left: 770px; top:-100px">
+    <h2>Authorization</h2>
+    <form>
+        <div class="input-box">
+            <input type="text" id="userName" required="" name="user_name_">
+            <label>Username</label>
+        </div>
+        <div class="input-box">
+            <input type="password" name="password_" required="" id="password">
+            <label>Password</label>
+            <div id="toggle" onclick="userlogin()"></div>
+        </div>
+
+        <input id="outputInf" type="submit" value="Sign in" onclick="userlogin()">
+</form>
+    <form style="
+    position: relative;
+    left: 100px;
+    top: -36px;
+">
+        <button onclick="document.querySelectorAll('input[type=\'text\']').forEach(input => input.value = '');">Clear</button>
+    </form>
+</div>
+</body>
+</html>

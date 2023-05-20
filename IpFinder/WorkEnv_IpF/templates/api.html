@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html style="background-color: teal;">
+<head>
+    <meta charset="UTF-8">
+    <title>Инструкция API для IP</title>
+    <style>
+      body {
+        max-width: 800px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      h1 {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 50px;
+      }
+      h2 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-top: 30px;
+      }
+      p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      code {
+        font-family: Consolas, monospace;
+        font-size: 1.1em;
+        padding: 2px 5px;
+        background-color: #f5f5f5;
+        border-radius: 3px;
+      }
+
+
+
+    </style>
+</head>
+<body>
+<a href="/IpFinder" style="text-decoration: none; color: white;"><img
+        src="https://im.wampi.ru/2023/05/16/arrow.png"
+        style="position: absolute;top: 13px;height: 40px;left: 14px;"></a>
+<h1>Инструкция API для IpFinder</h1>
+<p>API - это интерфейс программирования приложений, предоставляющий доступ к определенной функциональности. Существуют
+    различные API, например, API для работы с социальными сетями, API для работы с геоданными и т.д. Одним из таких API
+    является API, который работает с IP-адресами.</p>
+<p>API для IpFinder позволяет получить информацию о местоположении и других деталях, связанных с определенным IP-адресом.</p>
+<h2>Адрес запроса</h2>
+<p>Для того, чтобы сделать запрос к API, нужно отправить GET запрос на URL-адрес:</p>
+<code>http://apiFinder/"YOUR IP"</code>
+<p>где "YOUR IP" - IP-адрес, данные по которому необходимо получить.</p>
+<p>Например, чтобы получить информацию о IP-адресе 20.114.120.146, нужно отправить GET запрос на адрес:</p>
+<code>http://apiFinder/20.114.120.146</code>
+<h2>Ответ API</h2>
+<p>API для IP возвращает JSON-объект с данными в ответ на GET запрос.</p>
+<p>Структура объекта ответа может выглядеть следующим образом:</p>
+<pre style="
+    background-color: black;
+    color: white;">{
+      "ip": "192.168.1.1",
+      "country": "Россия",
+      "region": "Москва",
+      "city": "Москва",
+      "timezone": "Europe/Moscow"...
+    }</pre>
+</body>
+</html>
